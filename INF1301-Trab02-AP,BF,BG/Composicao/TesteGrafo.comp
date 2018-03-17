@@ -1,0 +1,25 @@
+# Composicao do programa de teste do módulo grafo utilizando o arcabouço 
+
+[Diretorios]
+
+Nome        =  TesteGrafo
+PathDefault =  ..\Fontes\TesteGrafo
+err         =  ..\Produto
+obj         =  ..\Objetos
+c           =  ..\Fontes\TesteGrafo
+h           =  ..\Fontes\TesteGrafo
+
+[Modulos]
+TestGra
+Grafo
+Lista
+
+[BuildInicio]
+/OUT:..\Produto\TRAB1-2.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+ArcaboucoTeste.lib
+
+[Fim]

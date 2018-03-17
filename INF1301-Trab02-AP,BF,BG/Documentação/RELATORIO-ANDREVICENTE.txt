@@ -1,0 +1,32 @@
+**********************************************
+* TRABALHO DE PROGRAMAÇÃO MODULAR - RELATÓRIO
+**********************************************
+
+*****************************************
+* Aluno: André Vicente Pessanha		*
+* Turma: 3WA Prof. Alessandro		*
+* PUC-Rio - Depto. de Informática	*
+*****************************************
+
+Data	 | Horas Trabalhadas  |   Tipo Tarefa   	   |    Descrição da Tarefa Realizada
+
+12/09/17 |      2h            |   Estudar       	   |    Estudar o enunciado do trabalho
+13/09/17 |      3h            |   Estudar                  |    Instalação do Arcabouço e leitura da documentação.
+14/09/17 |	4h	      |   Projetar 		   |    Criação do documento de especificação dos requisitos ; Elaboração da primeira versão dos Requisitos Não-Funcionais do projeto.
+15/09/17 |      2h	      |   Projetar      	   |    Elaboração da primeira versão dos Requisitos Funcionais do projeto.
+16/09/17 |      6h            |   Projetar      	   |    Elaboração da versão inicial do Modelo de Arquitetura.
+28/09/17 |      3h            |   Projetar      	   |    Modelar o Diagrama da arquitetura e a visão espandida das interfaces no Microsoft Visio.
+29/09/17 |      2h            |   Revisar especificações   |    Ir na monitoria para obter feedback das especificações
+30/09/17 |      6h            |   Revisar especificações   |    Elaborar nova versão dos requisitos e diagrama com base no feedback obtido.
+05/10/17 |      3h            |   Revisar especificações   |    Elaborar nova versão dos requisitos e diagrama com base no feedback obtido.
+06/10/17 |      5h            |   Projetar      	   |    Modelar o Modelo Físico do projeto no Microsoft Visio.
+11/10/17 |      2h            |   Revisar especificações   |    Elaborar a versão final dos requisitos e do Diagrama da Arquitetura com base no feedback obtido.
+12/10/17 |      10h           |   Revisar especificações   |    Elaborar nova versão do Modelo Físico com base no feedback obtido ; Inclusão das assertivas estruturais.
+13/10/17 |      8h            |   Codificar módulo 	   |    Implementação de funções do Módulo Grafo ; Pequenas correções no Módulo Lista do Arcabouço ; Criação dos arquivos .bat  
+14/10/17 |      13h           |   Codificar módulo 	   |    Implementação de funções do Módulo Grafo ; Elaborar o exemplo do Modelo Físico no Microsoft Visio.
+15/10/17 |      11h           |   Codificar módulo 	   |    Implementação de funções e correções no Módulo Grafo e Lista ; Criação do arquivo leiame.txt
+16/10/17 |      8h            |   revisar código do módulo |    Correções no Módulo Grafo ; Correções no Modelo Físico e no Diagrama de Arquitetura.
+17/10/17 |      8h            |   redigir script de teste  |    Criação dos testes da função LIS_ContaElementos ; Revisão final do código e das especificações.
+
+
+	  

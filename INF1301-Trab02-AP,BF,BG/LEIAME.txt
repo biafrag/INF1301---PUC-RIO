@@ -1,0 +1,56 @@
+****************************************************************************************
+ 
+Este documento fornece informações de utilização do gerenciador da Rede de Relacionamentos.
+
+Grupo AP;BF;BG - André Pessanha ; Bianca Fragoso ; Bianca Gomes 
+
+****************************************************************************************
+
+
+* OBJETIVO *
+
+O programa desenvolvido é parte integrante do trabalho 2 da disciplina INF1301 - Programação Modular.
+O objetivo do trabalho é implementar e testar o módulo Grafo Genérico, assim como testar o módulo Lista. 
+
+No executável "TRAB1-1.EXE" presente no arquivo compactado do trabalho, é implementado um teste do módulo Lista.
+No executável "TRAB1-2.EXE" presente no arquivo compactado do trabalho, é implementado um teste do módulo Grafo.
+
+* ESTRUTURA DE DIRETÓRIOS *
+
+Após descompactar são criados os seguintes diretórios:
+
+INF1301-Trab02-AP,BF,BG: Pasta Raíz do Projeto
+
+A pasta raíz contém os seguintes diretórios:
+
+BATCHES: Contém os arquivos .bat para execução dos testes dos módulos.
+
+COMPOSIÇÃO: Contém os arquivos COMP para gerar os arquivos MAKE dos módulos.Os arquivos MAKE, também estão neste diretório.
+
+DOCUMENTAÇÃO: Contém o documento da Especificação dos Requisitos, Diagrama de Arquitetura, Modelo Físico do sistema e os relatórios dos integrantes do grupo.
+
+FERRMNT: Contém todas as ferramentas (programas) complementares. Entre elas encontra-se GMake, um programa para gerar scripts de make a partir de arquivos que descrevem a composição de construtos.
+
+FONTES: Possui 2 diretórios, o primeiro para o teste do módulo Lista e o segundo para o teste do módulo Grafo. Cada diretório contém os arquivos fonte para compilação independente dos outros módulos do sistema.
+
+OBJETOS: Contém os arquivos .obj gerados a partir dos testes dos módulos e a biblioteca estática .lib
+
+PRODUTO: Contém os arquivos executáveis gerados e os logs de cada teste.
+
+SCRIPTS: Contém os scripts de testes dos módulos.
+
+
+* INSTALAÇÃO *
+
+1 - Caso haja interesse em recompilar todas as aplicações dos testes será necessário copiar o arquivo batch vsvars32.bat do diretório common7\tools do Visual Studio 2010 para o diretório FERRMNT desse projeto.
+2 - Também será necessário o arquivo ArcaboucoTeste.lib gerado em sua maquina na instalação do arcabouço. Encontre-o no diretório do arcabouço e copie para o diretório OBJETOS desse projeto.
+3 - Após esses 2 procedimentos, poderá seguir para a compilação das aplicações de teste, bastando executar os batches do diretorio BATCHES em ordem crescente (0*.bat, depois 1*.bat...) ou executando o batch chamado TUDO.bat, que faz todos esses passos automaticamente (executa apenas os batches com terminação 'Tudo', logo, apenas o batch de teste 3_TestaTudo.bat será executado).
+Depois desses 3 passos os arquivos da aplicação para testes do módulo Lista e do módulo Grafo serão gerados.
+
+
+* MODO DE USO *
+
+Os arquivos de testes já estão prontos para serem usados e não há necessidade de nova instalação, basta escolher o teste desejado entre os arquivos batches nomeados com numeração 3 no diretório BATCHES desse projeto, cada um executa um teste especifico (ou todos os testes, no caso do TestaTudo.bat) e geram seus proprios logs, ao final do teste, o log gerado será aberto no notepad, que ao ser fechado encerrará a aplicação.
+Caso execute o batch 0_LimpaTudo.bat, todos os arquivos make, build, log, err, exe entre outros arquivos gerados após a instalação desse projeto serão apagados e será necessario uma nova instalação.
+O batch TUDO.bat só funciona com os passos 1 e 2 da instalação cumpridos, pois também executa o batch 0_LimpaTudo.bat.
+

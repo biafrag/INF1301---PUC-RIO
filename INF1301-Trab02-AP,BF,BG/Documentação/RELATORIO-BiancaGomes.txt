@@ -1,0 +1,23 @@
+**********************************************
+* TRABALHO DE PROGRAMAÇÃO MODULAR - RELATÓRIO*
+**********************************************
+
+*****************************************
+* Aluna: Bianca Gomes			*
+* Turma: 3WA (Prof. Alessandro)		*
+* PUC-Rio - Depto. de Informática	*
+*****************************************
+
+*********************************************************************
+Data 	  Horas Trabalhadas  Tipo Tarefa   Descrição da Tarefa Realizada
+09/10/17	3h	       Estudo           Estudo sobre o modelo físico e as especificações
+10/10/17	2h	Revisar Especificações	Revisar Especificações do projeto que precisavam ser alteradas
+13/10/17	3h		Estudo		Estudo sobre a geração do arquivo Gmake
+13/10/17	2h		Projetar	Projetar arquivo .comp e .bat
+14/10/17	4h     Revisar código de módulo Revisar código feito pelos os outros integrantes do grupo
+14/10/17	4h	   Codificar módulo	Codificar e revisar módulo TESTGRA.c e TESTLIS.c
+15/10/17	3h	Redigir script de teste Redigir script de teste para complemetar os já feitos pelos integrantes do grupo
+15/10/17	3h 	Revisar código de módulo Revisar os módulos para que passem nos testes
+15/10/17	4h	Redigir script de teste  Realizar novos testes
+16/10/17	10h	Realizar e Revisar       Realizar testes e revisar código de módulo 
+17/10/17	5h	Realização de Testes	 Realização dos testes finais assim como últimas correções
