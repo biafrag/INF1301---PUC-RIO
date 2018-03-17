@@ -1,0 +1,122 @@
+// Script:    TesteGrafo.script
+// Autores:   André Pessanha,Bianca Gomes e Bianca Fragoso
+// Data:      14/out/2017
+// Propósito: Testar superficialmente o módulo grafo não dirigido genérico com cabeça//
+
+== Inicializar valores
+=declararparm   Grafo0  int 0
+=declararparm   Grafo1  int 1
+=declararparm   Grafo2  int 2
+=declararparm   Grafo3  int 3
+=declararparm   Grafo4  int 4
+
+=declararparm   nome0  string "Aba"
+=declararparm   nome1  string "Ivana"
+=declararparm   nome2  string "Alberto"
+=declararparm   nome3  string "Logan"
+=declararparm   nome4  string "Genie"
+
+=declararparm   data0  string "20/10/1987"
+=declararparm   data1 string  "02/03/2012"
+=declararparm   data2 string "23/02/1938"
+=declararparm   data3  string "12/12/1996"
+
+=declararparm   email0  string "njnabc@abcdefg"
+=declararparm   email1 string  "jkvdkn@bdsbjdb"
+=declararparm   email2 string "fncdkifn@jbsdkbc"
+=declararparm   email3  string "jdfhkhc@hjdjshf"
+
+=declararparm   cidade0 string "Rio"
+=declararparm   cidade1 string  "Petropolis"
+=declararparm   cidade2 string "Araruama"
+=declararparm   cidade3 string "Brasilia"
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  4
+
+=declararparm   vert0          int  0
+=declararparm   vert1		    int  1
+=declararparm   vert2		    int  2
+=declararparm   vert3		    int  3
+=declararparm   vert4		    int  4
+=declararparm   vert5		    int  5
+
+
+=declararparm   OK             int  0
+=declararparm   GrafoNExiste   int  1
+=declararparm   GrafoVazio     int  2
+=declararparm   VerticeNExiste int  3
+=declararparm   ArestaNExiste  int  4
+=declararparm   FaltouMemoria  int  5
+=declararparm   ArestaJaExiste int  6
+
+== Cria o grafos
+=criargrafo Grafo0 
+=criargrafo Grafo1 
+=criargrafo Grafo2
+=criargrafo Grafo3
+
+
+== Verificar Obter Valor do vertice corrente com o grafo vazio
+=obtervalorcorr  Grafo0   "???"  "???"  "???" "???"   pNULL
+
+
+== Inserir elemento em Grafo vazio
+=insevertice     Grafo1   nome1 cidade1 data1 email1 vert4   OK
+=obtervalorcorr  Grafo1   nome1 cidade1 data1 email1 pNaoNULL
+
+==Inserir mais de um elemento em grafo 
+
+=insevertice     Grafo0   nome2 cidade2  data2 email2 vert0  OK
+=irvertice  	 Grafo0  0   OK
+=obtervalorcorr  Grafo0   nome2 cidade2  data2 email2 pNaoNULL
+=insevertice     Grafo0   nome3 cidade3  data3 email3 vert1 OK
+=irvertice 	 Grafo0  1   OK
+=obtervalorcorr  Grafo0   nome3 cidade3  data3 email3 pNaoNULL
+=insevertice     Grafo0   nome3 cidade3  data1 email2 vert2 OK
+=irvertice  	 Grafo0  2   OK
+=obtervalorcorr  Grafo0   nome3 cidade3  data1 email2 pNaoNULL
+=insevertice     Grafo2   nome1 cidade1  data1 email1 vert3 OK
+=irvertice  	 Grafo2  3   OK
+=obtervalorcorr  Grafo2   nome1 cidade1  data1 email1 pNaoNULL
+=insevertice     Grafo2   nome1 cidade3  data1 email3 vert5 OK
+=irvertice  	 Grafo2  5   OK
+=obtervalorcorr  Grafo2   nome1 cidade3  data1 email3 pNaoNULL
+
+
+== Excluir Vertice Corrente
+=excluirvertcorr  Grafo2	OK
+
+
+== Ir Para Vertice
+=irvertice  Grafo0  vert0   OK
+=irvertice  Grafo3  vert0   GrafoVazio 
+=irvertice  Grafo1  vert2   VerticeNExiste
+
+
+== Insere Aresta Corrente
+=insearestcorr Grafo0 vert0  OK
+=insearestcorr Grafo0 vert1  OK
+=insearestcorr Grafo0 vert2  OK
+=insearestcorr Grafo1 vert4  OK
+=insearestcorr Grafo3 vert1  GrafoVazio
+
+
+== Excluir Aresta
+=excluirarest	Grafo0 vert0 vert1 OK
+=excluirarest	Grafo0 vert1 vert2 ArestaNExiste
+=excluirarest	Grafo3 vert2 vert3 GrafoVazio
+
+
+== Destruir grafos
+=destruirgrafo Grafo1 OK
+=destruirgrafo Grafo2 OK
+=destruirgrafo Grafo3 OK
+=destruirrgrafo Grafo2 GrafoNExiste
+
+
+
+
+
+
+

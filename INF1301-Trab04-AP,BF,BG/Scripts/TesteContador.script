@@ -1,0 +1,226 @@
+// Script:    TesteGrafo.script
+// Autores:   Andre Pessanha,Bianca Gomes e Bianca Fragoso
+// Data:      05/dez/2017
+// Proposito: Testar superficialmente o modulo grafo não dirigido generico com cabeca//
+
+== Inicializar valores
+=declararparm   Grafo0  int 0
+=declararparm   Grafo1  int 1
+=declararparm   Grafo2  int 2
+=declararparm   Grafo3  int 3
+=declararparm   Grafo4  int 4
+=declararparm   Grafo5  int 5
+
+=declararparm   nome0  string "Aba"
+=declararparm   nome1  string "Ivana"
+=declararparm   nome2  string "Alberto"
+=declararparm   nome3  string "Logan"
+=declararparm   nome4  string "Genie"
+
+=declararparm   data0  string "20/10/1987"
+=declararparm   data1  string "02/03/2012"
+=declararparm   data2  string "23/02/1938"
+=declararparm   data3  string "12/12/1996"
+
+=declararparm   email0  string "njnabc@abcdefg"
+=declararparm   email1  string "jkvdkn@bdsbjdb"
+=declararparm   email2  string "fncdkifn@jbsdkbc"
+=declararparm   email3  string "jdfhkhc@hjdjshf"
+
+=declararparm   cidade0 string "Rio"
+=declararparm   cidade1 string "Petropolis"
+=declararparm   cidade2 string "Araruama"
+=declararparm   cidade3 string "Brasilia"
+
+=declararparm   id0  string "Abb"
+=declararparm   id1  string "Ivy"
+=declararparm   id2  string "Alb"
+=declararparm   id3  string "Log"
+=declararparm   id4  string "Gen"
+
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  4
+
+=declararparm   vert0          int  0
+=declararparm   vert1		   int  1
+=declararparm   vert2		   int  2
+=declararparm   vert3		   int  3
+=declararparm   vert4		   int  4
+=declararparm   vert5		   int  5
+
+
+=declararparm   OK             int  0
+=declararparm   GrafoNExiste   int  1
+=declararparm   GrafoVazio     int  2
+=declararparm   VerticeNExiste int  3
+=declararparm   ArestaNExiste  int  4
+=declararparm   ArestaExiste   int  5
+=declararparm   FaltouMemoria  int  6
+=declararparm   FimGrafo       int  7
+
+== Iniciar contagem
+=inicializarcontadores  ""
+=lercontadores          "Grafo"
+=iniciarcontagem
+
+
+== Testando todas as funcoes com Grafo NULL
+=resetteste
+=zerartodoscontadores
+
+=destruirgrafo Grafo0 pNULL
+=contagemcontador  "GRA_DestruirGrafo"  1
+=contagemcontador "GRA_DestruirGrafo-if0" 1
+
+=esvaziargrafo Grafo0 GrafoNExiste
+=contagemcontador "GRA_EsvaziarGrafo-if0" 1
+ 
+=insevertice Grafo0 id1 nome1 cidade1 data1 email1 vert1 GrafoNExiste
+=contagemcontador  "GRA_InserirVertice"  1
+=contagemcontador "GRA_InserirVertice-if0" 1
+
+=obtervalorcorr Grafo0 id1 nome1 cidade1 data1 email1 pNULL
+=contagemcontador "GRA_ObterValorCorrente" 1
+=contagemcontador "GRA_ObterValorCorrente-if0" 1
+
+=insearestcorr Grafo0 id1 GrafoNExiste
+=contagemcontador  "GRA_InserirArestaCorrente"  1
+=contagemcontador "GRA_InserirArestaCorrente-if0" 1
+
+=excluirarest Grafo0 id1 id2 GrafoNExiste
+=contagemcontador "GRA_ExcluirAresta" 1
+=contagemcontador "GRA_ExcluirAresta-if0" 1
+
+=excluirvertcorr Grafo0 GrafoNExiste
+=contagemcontador "GRA_ExcluiVerticeCorrente" 1
+=contagemcontador "GRA_ExcluiVerticeCorrente-if0" 1
+
+=verifvertice Grafo0 id0 GrafoNExiste
+=contagemcontador "GRA_VerificaVerticeExiste" 1
+=contagemcontador "GRA_VerificaVerticeExiste-if0" 1
+
+=avancarvertcorr Grafo0 GrafoNExiste
+=contagemcontador "GRA_AvancarVerticeCorrente" 1
+=contagemcontador "GRA_AvancarVerticeCorrente-if0" 1
+
+=irinicio Grafo0 GrafoNExiste
+=contagemcontador "GRA_IrInicio" 1
+=contagemcontador "GRA_IrInicio-if0" 1
+
+=obtemarestcorr Grafo0 pNULL
+=contagemcontador "GRA_ObtemArestasVerticeCorrente" 1
+=contagemcontador "GRA_ObtemArestasVerticeCorrente-if0" 1
+
+
+== Testando todas as funcoes com Grafo != NULL
+
+=criargrafo Grafo0 pNaoNULL
+=contagemcontador  "GRA_CriarGrafo"  1
+=contagemcontador "GRA_CriarGrafo-pr0" 1
+
+== Destruir Grafo Vazio
+=destruirgrafo Grafo0 pNULL
+=contagemcontador  "GRA_DestruirGrafo"  2
+=contagemcontador "GRA_DestruirGrafo-pr0" 1
+
+== Destruir Grafo Nao Vazio
+=criargrafo Grafo0 pNaoNULL
+=insevertice Grafo0 id1 nome1 cidade1 data1 email1 vert1 OK
+=contagemcontador  "GRA_InserirVertice"  2
+=contagemcontador "GRA_InserirVertice-pr0" 1
+=contagemcontador "GRA_InserirVertice-pr1" 1
+=contagemcontador "GRA_InserirVertice-if2" 1
+=contagemcontador "GRA_InserirVertice-pr2" 1
+=destruirgrafo Grafo0 pNULL
+=contagemcontador  "GRA_DestruirGrafo"  3
+=contagemcontador "GRA_DestruirGrafo-pr0" 2
+=contagemcontador "GRA_DestruirGrafo-if1" 2
+
+== Excluir vértice corrente
+=criargrafo Grafo4 pNaoNULL
+=excluirvertcorr Grafo4 GrafoVazio
+=insevertice Grafo4 id1 nome1 cidade1 data1 email1 vert1 OK
+=excluirvertcorr Grafo4 OK
+=contagemcontador   "GRA_ExcluiVerticeCorrente-pr0" 2
+=contagemcontador   "GRA_ExcluiVerticeCorrente-pr0" 2
+=contagemcontador   "GRA_ExcluiVerticeCorrente-pr1" 1
+=contagemcontador   "GRA_ExcluiVerticeCorrente-if4" 1
+
+==Inserir aresta em vertice que nao existe
+=criargrafo Grafo0 pNaoNULL
+=insearestcorr Grafo0 id4 GrafoVazio
+=insevertice Grafo0 id1 nome1 cidade1 data1 email1 vert1 OK
+=insearestcorr Grafo0 id4 OK
+=insearestcorr Grafo0 id4 ArestaExiste
+=insevertice Grafo0 id2 nome2 cidade2 data2 email2 vert2 OK
+=insearestcorr Grafo0 id1 ArestaExiste
+
+== Obter Valor corrente
+=criargrafo Grafo2 pNaoNULL
+=insevertice Grafo2 id1 nome1 cidade1 data1 email1 vert1 OK
+=obtervalorcorr Grafo2 id1 nome1 cidade1 data1 email1 pNaoNULL
+=contagemcontador   "GRA_ObterValorCorrente-pr0" 1
+
+== Ir inicio Grafo
+=insevertice Grafo2 id2 nome2 cidade2 data2 email2 vert2 OK
+=irinicio Grafo2 OK
+=contagemcontador   "GRA_IrInicio-pr0" 1
+=contagemcontador   "GRA_IrInicio-pr1" 1
+
+== Avancar vertice corrente ate fim
+=avancarvertcorr Grafo2 OK
+=contagemcontador  "GRA_AvancarVerticeCorrente-pr0" 1
+=contagemcontador   "GRA_AvancarVerticeCorrente-pr1" 1
+=contagemcontador   "GRA_AvancarVerticeCorrente-pr2" 1
+=avancarvertcorr Grafo2 FimGrafo
+=contagemcontador "GRA_AvancarVerticeCorrente-if2" 1
+=obtemarestcorr Grafo2 pNULL
+=contagemcontador "GRA_ObtemArestasVerticeCorrente-pr0" 1
+
+== Avancar Vertice Corrente Grafo vazio
+=criargrafo Grafo1 pNaoNULL
+=excluirvertcorr Grafo1 GrafoVazio
+=avancarvertcorr Grafo1 GrafoVazio
+=contagemcontador "GRA_AvancarVerticeCorrente-if1" 1
+
+== Verificar Vertice Existe com Grafo Vazio
+=verifvertice Grafo1 id0 VerticeNExiste
+=contagemcontador "GRA_VerificaVerticeExiste-if1" 1
+
+== Ir para o inicio com Grafo Vazio
+=irinicio Grafo1 GrafoVazio
+=contagemcontador "GRA_IrInicio-if1" 1
+
+== Esvaziar Grafo Não vazio
+=insevertice Grafo1 id1 nome1 cidade1 data1 email1 vert1 OK
+=esvaziargrafo Grafo1 OK
+=contagemcontador "GRA_EsvaziarGrafo-if0" 1
+
+== Excluir vertice corrente com grafo pelo menos 2 vertices
+=insevertice Grafo1 id1 nome1 cidade1 data1 email1 vert1 OK
+=insevertice Grafo1 id2 nome2 cidade2 data2 email2 vert2 OK
+=excluirvertcorr Grafo1 OK
+=contagemcontador "GRA_ExcluiVerticeCorrente-else0" 1
+
+== Incluir arestas e excluir
+=criargrafo Grafo5 pNaoNULL
+=insearestcorr  Grafo5  id2 GrafoVazio
+=insevertice Grafo5 id1 nome1 cidade1 data1 email1 vert1 OK
+=insearestcorr  Grafo5  id2 VerticeNExiste
+
+
+== Terminar contagem
+=pararcontagem
+=verificarcontagens  0
+
+
+== Finalizando contagem
+=terminarcontadores
+
+
+
+
+
+
+

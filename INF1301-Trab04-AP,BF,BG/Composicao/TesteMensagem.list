@@ -1,0 +1,146 @@
+GERADOR DE SCRIPT DE DIRETIVAS PARA MAKE
+   LES / Informática / PUC-Rio    Versão 6.00 (c) 2005
+
+Composição do construto: ..\composicao\TesteMensagem.comp
+
+   Nome do Construto:           TesteMensagem
+   Diretório base:              C:\Users\biafr\Documents\Documentos Puc 2\ProgramacaoModular\INF1301-Trab04-AP,BF,BG\composicao
+
+   Arquivo composição:          ..\composicao\TesteMensagem.comp
+   Arquivo plataforma:          gmake.parm
+
+   Arquivo diretivas MAKE:      TesteMensagem.make
+   Arquivo diretivas LINK:      TesteMensagem.build
+   Arquivo listagem:            TesteMensagem.list
+
+Módulos do construto: ..\composicao\TesteMensagem.comp
+
+   testmen.c
+   mensagem.c
+   lista.c
+
+Estatísticas do construto
+
+   Estatísticas do arquivo: generico.h
+      Total linhas:             713
+      Linhas de código:          59
+      Linhas de comentário:     572
+      Linhas em branco:          82
+   Arquivos de inclusão de que necessita
+      tst_espc.h
+   Arquivos em que é incluído
+      testmen.c
+
+   Estatísticas do arquivo: lerparm.h
+      Total linhas:             293
+      Linhas de código:          36
+      Linhas de comentário:     188
+      Linhas em branco:          69
+   Arquivos em que é incluído
+      testmen.c
+
+   Estatísticas do arquivo: lista.c
+      Total linhas:             577
+      Linhas de código:         296
+      Linhas de comentário:     144
+      Linhas em branco:         156
+   Arquivos de inclusão de que necessita
+      lista.h
+
+   Estatísticas do arquivo: lista.h
+      Total linhas:             367
+      Linhas de código:          37
+      Linhas de comentário:     279
+      Linhas em branco:          52
+   Arquivos em que é incluído
+      lista.c
+      mensagem.c
+      mensagem.h
+      testmen.c
+
+   Estatísticas do arquivo: mensagem.c
+      Total linhas:             204
+      Linhas de código:          94
+      Linhas de comentário:      63
+      Linhas em branco:          53
+   Arquivos de inclusão de que necessita
+      lista.h
+      mensagem.h
+
+   Estatísticas do arquivo: mensagem.h
+      Total linhas:             199
+      Linhas de código:          25
+      Linhas de comentário:     147
+      Linhas em branco:          27
+   Arquivos de inclusão de que necessita
+      lista.h
+   Arquivos em que é incluído
+      mensagem.c
+      testmen.c
+
+   Estatísticas do arquivo: testmen.c
+      Total linhas:             298
+      Linhas de código:         172
+      Linhas de comentário:      60
+      Linhas em branco:          74
+   Arquivos de inclusão de que necessita
+      generico.h
+      lerparm.h
+      lista.h
+      mensagem.h
+      tst_espc.h
+
+   Estatísticas do arquivo: tst_espc.h
+      Total linhas:             228
+      Linhas de código:          23
+      Linhas de comentário:     185
+      Linhas em branco:          20
+   Arquivos em que é incluído
+      generico.h
+      testmen.c
+
+Totais por tipo de arquivo
+
+  Tipo: h        Path: ..\Fontes\TesteMensagem
+         Total linhas do tipo:      1800
+         Linhas de código:           180
+         Linhas de comentário:      1371
+         Linhas em branco:           250
+         Arquivos deste tipo:          5
+
+  Tipo: obj      Path: ..\Objetos
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: err      Path: ..\Produto
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: DEFAULT  Path: ..\Fontes\TesteMensagem
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: c        Path: ..\Fontes\TesteMensagem
+         Total linhas do tipo:      1079
+         Linhas de código:           562
+         Linhas de comentário:       267
+         Linhas em branco:           283
+         Arquivos deste tipo:          3
+
+Totais para todo o construto TesteMensagem
+
+   Total linhas:              2879
+   Linhas de código:           742
+   Linhas de comentário:      1638
+   Linhas em branco:           533
+   Arquivos processados:         8
+

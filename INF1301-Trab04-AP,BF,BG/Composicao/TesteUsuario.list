@@ -1,0 +1,180 @@
+GERADOR DE SCRIPT DE DIRETIVAS PARA MAKE
+   LES / Informática / PUC-Rio    Versão 6.00 (c) 2005
+
+Composição do construto: ..\composicao\TesteUsuario.comp
+
+   Nome do Construto:           TesteUsuario
+   Diretório base:              C:\Users\biafr\Documents\Documentos Puc 2\ProgramacaoModular\INF1301-Trab04-AP,BF,BG\composicao
+
+   Arquivo composição:          ..\composicao\TesteUsuario.comp
+   Arquivo plataforma:          gmake.parm
+
+   Arquivo diretivas MAKE:      TesteUsuario.make
+   Arquivo diretivas LINK:      TesteUsuario.build
+   Arquivo listagem:            TesteUsuario.list
+
+Módulos do construto: ..\composicao\TesteUsuario.comp
+
+   testusu.c
+   usuario.c
+   mensagem.c
+   lista.c
+
+Estatísticas do construto
+
+   Estatísticas do arquivo: generico.h
+      Total linhas:             713
+      Linhas de código:          59
+      Linhas de comentário:     572
+      Linhas em branco:          82
+   Arquivos de inclusão de que necessita
+      tst_espc.h
+   Arquivos em que é incluído
+      testusu.c
+
+   Estatísticas do arquivo: lerparm.h
+      Total linhas:             293
+      Linhas de código:          36
+      Linhas de comentário:     188
+      Linhas em branco:          69
+   Arquivos em que é incluído
+      testusu.c
+
+   Estatísticas do arquivo: lista.c
+      Total linhas:             577
+      Linhas de código:         296
+      Linhas de comentário:     144
+      Linhas em branco:         156
+   Arquivos de inclusão de que necessita
+      lista.h
+
+   Estatísticas do arquivo: lista.h
+      Total linhas:             367
+      Linhas de código:          37
+      Linhas de comentário:     279
+      Linhas em branco:          52
+   Arquivos em que é incluído
+      lista.c
+      mensagem.c
+      mensagem.h
+      testusu.c
+      usuario.c
+      usuario.h
+
+   Estatísticas do arquivo: mensagem.c
+      Total linhas:             204
+      Linhas de código:          94
+      Linhas de comentário:      63
+      Linhas em branco:          53
+   Arquivos de inclusão de que necessita
+      lista.h
+      mensagem.h
+      usuario.h
+
+   Estatísticas do arquivo: mensagem.h
+      Total linhas:             200
+      Linhas de código:          26
+      Linhas de comentário:     147
+      Linhas em branco:          27
+   Arquivos de inclusão de que necessita
+      lista.h
+      usuario.h
+   Arquivos em que é incluído
+      mensagem.c
+      testusu.c
+      usuario.c
+      usuario.h
+
+   Estatísticas do arquivo: testusu.c
+      Total linhas:             342
+      Linhas de código:         187
+      Linhas de comentário:      68
+      Linhas em branco:          98
+   Arquivos de inclusão de que necessita
+      generico.h
+      lerparm.h
+      lista.h
+      mensagem.h
+      tst_espc.h
+      usuario.h
+
+   Estatísticas do arquivo: tst_espc.h
+      Total linhas:             228
+      Linhas de código:          23
+      Linhas de comentário:     185
+      Linhas em branco:          20
+   Arquivos em que é incluído
+      generico.h
+      testusu.c
+
+   Estatísticas do arquivo: usuario.c
+      Total linhas:             356
+      Linhas de código:         200
+      Linhas de comentário:      98
+      Linhas em branco:          68
+   Arquivos de inclusão de que necessita
+      lista.h
+      mensagem.h
+      usuario.h
+
+   Estatísticas do arquivo: usuario.h
+      Total linhas:             272
+      Linhas de código:          30
+      Linhas de comentário:     203
+      Linhas em branco:          39
+   Arquivos de inclusão de que necessita
+      lista.h
+      mensagem.h
+      usuario.h
+   Arquivos em que é incluído
+      mensagem.c
+      mensagem.h
+      testusu.c
+      usuario.c
+      usuario.h
+
+Totais por tipo de arquivo
+
+  Tipo: h        Path: ..\Fontes\TesteUsuario
+         Total linhas do tipo:      2073
+         Linhas de código:           211
+         Linhas de comentário:      1574
+         Linhas em branco:           289
+         Arquivos deste tipo:          6
+
+  Tipo: obj      Path: ..\Objetos
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: err      Path: ..\Produto
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: DEFAULT  Path: ..\Fontes\TesteUsuario
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: c        Path: ..\Fontes\TesteUsuario
+         Total linhas do tipo:      1479
+         Linhas de código:           777
+         Linhas de comentário:       373
+         Linhas em branco:           375
+         Arquivos deste tipo:          4
+
+Totais para todo o construto TesteUsuario
+
+   Total linhas:              3552
+   Linhas de código:           988
+   Linhas de comentário:      1947
+   Linhas em branco:           664
+   Arquivos processados:        10
+

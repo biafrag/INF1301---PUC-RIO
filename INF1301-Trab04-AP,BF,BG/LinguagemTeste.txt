@@ -1,0 +1,28 @@
+TesteGrafo.script
+
+=criargrafo - o objetivo desse comando é criar um grafo com cabeça - retorna ponteiro pra Grafo.
+=destruirgrafo - o objetivo desse comando é destruir um grafo - retorna NULL
+=insevertice - o objetivo desse comando é inserir um vertice em um determinado grafo - Cobre as assertivas OK,GrafoNExiste,FaltouMemoria.
+=excluirvertcorr - o objetivo desse comando é excluir o vertice corrente de um determinado grafo - Cobre as assertivas OK,GrafoNExiste,FaltouMemoria,OK.
+=insearestcorr - o objetivo desse comando é inserir uma aresta no vértice corrente do grafo - Cobre as assertivas GrafoNExiste,GrafoVazio, ArestaExiste,FaltouMemoria,OK.
+=excluirarest - o objetivo desse comando é excluir uma aresta do vértice corrente do grafo- Cobre as assertivas GrafoNExiste,GrafoVazio, ArestaNExiste,OK.
+=obtervalorcorr - o objetivo desse comando é obter o valor do vértice corrente do grafo - Retorna ponteiro void* do valor.
+
+
+
+TesteContador.script (Além de todas as funções que já foram usadas no TesteGrafo.script)
+
+
+=resetteste - o objetivo dessa função é resetar um grafo - provoca vazamento de memória
+=zerartodoscontadores - o objetivo dessa função é zerar os contadores
+=contagemcontador  o objetivo desse comando é fazer a contagem dos contadores
+=pararcontagem - o objetivo desse comando é parar a contagem
+=verificarcontagens  - o objetivo dessa comando é verificar as contagens
+
+Deturpa.script  (Além de todas as funções que já foram usadas no TesteGrafo.script)
+
+=verificarcabeca - o objetivo desse comando é verificar se tem algum erro na estrutura do Grafo e contabilizar o numero de erros. - Retorna OK ou ErroEstrura.
+=verificargrafo - o objetivo desse comando é verificar se tem algum erro na estrutura do Grafo. - Retorna OK ou ErroEstrura.
+=verificarvertice - Verifica a integridade de um vértice estrutural do Grafo. - Retorna OK ou ErroEstrura.
+=deturpar - Essa função destina-se a preparar os cenários de teste dos casos de teste utilizados ao testar os verificadores estruturais do Grafo.
+

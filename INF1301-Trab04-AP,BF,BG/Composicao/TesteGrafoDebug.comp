@@ -1,0 +1,26 @@
+# Teste do módulo Grafo compilado com debug
+
+[Diretorios]
+
+Nome        =  TesteGrafoDebug
+PathDefault =  ..\Fontes\TesteGrafoDebug
+err         =  ..\Produto
+obj         =  ..\Objetos
+c           =  ..\Fontes\TesteGrafoDebug
+h           =  ..\Fontes\TesteGrafoDebug
+def         =  ..\Tabelas
+
+[Modulos]
+TestGra    
+Grafo      /D_DEBUG
+Lista
+
+[BuildInicio]
+/OUT:..\produto\TRAB4-5.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+ArcaboucoTeste.lib
+
+[Fim]

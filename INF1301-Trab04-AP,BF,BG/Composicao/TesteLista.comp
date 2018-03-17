@@ -1,0 +1,24 @@
+# Composicao do programa de teste do módulo lista utilizando o arcabouço 
+
+[Diretorios]
+
+Nome        =  TesteLista
+PathDefault =  ..\Fontes\TesteLista
+err         =  ..\Produto
+obj         =  ..\Objetos
+c           =  ..\Fontes\TesteLista
+h           =  ..\Fontes\TesteLista
+
+[Modulos]
+TestLis
+Lista
+
+[BuildInicio]
+/OUT:..\Produto\TRAB4-1.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+ArcaboucoTeste.lib
+
+[Fim]

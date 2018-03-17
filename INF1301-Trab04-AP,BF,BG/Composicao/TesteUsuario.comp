@@ -1,0 +1,26 @@
+# Composicao do programa de teste do módulo usuario utilizando o arcabouço 
+
+[Diretorios]
+
+Nome        =  TesteUsuario
+PathDefault =  ..\Fontes\TesteUsuario
+err         =  ..\Produto
+obj         =  ..\Objetos
+c           =  ..\Fontes\TesteUsuario
+h           =  ..\Fontes\TesteUsuario
+
+[Modulos]
+TestUsu
+Usuario
+Mensagem
+Lista
+
+[BuildInicio]
+/OUT:..\Produto\TRAB4-3.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+ArcaboucoTeste.lib
+
+[Fim]

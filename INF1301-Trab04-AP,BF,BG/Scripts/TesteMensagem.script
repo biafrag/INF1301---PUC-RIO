@@ -1,0 +1,84 @@
+// Script:    TesteMensagem.script
+// Autores:   André Pessanha,Bianca Gomes e Bianca Fragoso
+// Data:      06/dez/2017
+// Propósito: Testar superficialmente o módulo Mensagem //
+
+== Inicializar valores
+=declararparm   Mensagem0  int 0
+=declararparm   Mensagem1  int 1
+=declararparm   Mensagem2  int 2
+=declararparm   Mensagem3  int 3
+
+=declararparm   id0  string "Abb"
+=declararparm   id1  string "Ivy"
+=declararparm   id2  string "Alb"
+=declararparm   id3  string "Log"
+=declararparm   id4  string "Gen"
+
+=declararparm	txt0 string "Teste 0"
+=declararparm	txt1 string "Teste 1"
+=declararparm	txt2 string "Teste 2"
+
+=declararparm	Enviadas	int	1
+=declararparm	Recebidas	int	2
+
+=declararparm   OK                 int  0
+=declararparm   FaltouMemoria      int  1
+=declararparm   SemMensagem	        int  2
+=declararparm   MensagemNExiste    int  3
+=declararparm   FimRegistro	        int  4
+=declararparm   OpcaoNExiste       int  5
+
+== Criar Mensagem
+=criarmensagem	Mensagem0	id0	id1	txt0
+=criarmensagem	Mensagem1	id2	id3	txt1
+=criarmensagem	Mensagem2	id4	id1	txt2
+
+== Verificar sem mensagens
+=contamensagem	Enviadas	SemMensagem	        
+=contamensagem	Recebidas	SemMensagem	        
+
+== Enviar Mensagem
+=enviarmensagem	Mensagem0	OK
+=enviarmensagem	Mensagem1	OK
+=enviarmensagem	Mensagem2	OK
+=enviarmensagem	Mensagem3	MensagemNExiste
+
+== Conta Mensagem
+=contamensagem	Enviadas	OK
+=contamensagem	Recebidas	OK
+
+== Ir no inicio e Avancar no registro de Mensagens
+=irmensagem	Enviadas	OK
+=irmensagem	Recebidas	OK
+=avancamensagem	Enviadas	OK
+=avancamensagem	Recebidas	OK
+
+== Avancar ate o fim do Registro
+=avancamensagem	Enviadas	OK
+=avancamensagem	Enviadas	FimRegistro
+=avancamensagem	Recebidas	OK
+=avancamensagem	Recebidas	FimRegistro
+
+== Obter Mensagem
+=obtermensagem	 Enviadas	OK
+=obtermensagem	 Recebidas	OK
+
+== Testes com mensagens enviadas
+=irmensagem	Enviadas	OK
+=obtermensagem	 Enviadas	OK
+=avancamensagem	Enviadas	OK
+=obtermensagem	 Enviadas	OK
+=avancamensagem	Enviadas	OK
+=obtermensagem	 Enviadas	OK
+=avancamensagem	Enviadas	FimRegistro
+
+== Testes com mensagens recebidas
+=irmensagem	Recebidas	OK
+=obtermensagem	 Recebidas	OK
+=avancamensagem	Recebidas	OK
+=obtermensagem	 Recebidas	OK
+=avancamensagem	Recebidas	OK
+=obtermensagem	 Recebidas	OK
+=avancamensagem	Recebidas	FimRegistro
+

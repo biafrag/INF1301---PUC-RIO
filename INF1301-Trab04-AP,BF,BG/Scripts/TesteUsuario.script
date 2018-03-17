@@ -1,0 +1,101 @@
+// Script:    TesteUsuario.script
+// Autores:   André Pessanha,Bianca Gomes e Bianca Fragoso
+// Data:      01/dec/2017
+// Propósito: Testar superficialmente o módulo usuario //
+
+== Inicializar valores
+=declararparm   Usuario0  int 0
+=declararparm   Usuario1  int 1
+=declararparm   Usuario2  int 2
+=declararparm   Usuario3  int 3
+=declararparm   Usuario4  int 4
+
+=declararparm   nomeop   int 1
+=declararparm   emailop  int 2
+=declararparm   dataop   int 3
+=declararparm   cidadeop int 4
+
+=declararparm   nome0  string "Aba"
+=declararparm   nome1  string "Ivana"
+=declararparm   nome2  string "Alberto"
+=declararparm   nome3  string "Logan"
+=declararparm   nome4  string "Genie"
+=declararparm   nome5  string "2222"
+
+=declararparm   data0  string "20/10/1987"
+=declararparm   data1 string  "23/03/20125"
+=declararparm   data2 string "2302193803"
+=declararparm   data3  string "92/12/1996"
+
+=declararparm   email0  string "njnabc@abcdefg.com"
+=declararparm   email1  string  "j@bdsbjdb"
+=declararparm   email2  string "fjbsdkbc"
+=declararparm   email3  string "jdfhkhc@hjdjshf"
+
+=declararparm   cidade0 string "Rio"
+=declararparm   cidade1 string  "Petropolis"
+=declararparm   cidade2 string "Araruama"
+=declararparm   cidade3 string "Brasilia"
+
+=declararparm   id0  string "Abb"
+=declararparm   id1  string "Ivy"
+=declararparm   id2  string "Alb"
+=declararparm   id3  string "Log"
+=declararparm   id4  string "Gen"
+
+=declararparm	Enviadas	int	1
+=declararparm	Recebidas	int	2
+
+=declararparm   OK                 int  0
+=declararparm   UsuarioNExiste     int  1
+=declararparm   FaltouMemoria      int  2
+=declararparm   InfoExcedeuTamanho int  3
+=declararparm   InfoInvalida       int  4
+=declararparm   OpcaoNExiste       int  5
+
+== Cria o Usuario
+=criarusuario Usuario0 id0 nome0 email0 data0 cidade0
+=criarusuario Usuario1 id1 nome1 email1 data1 cidade1
+=criarusuario Usuario2 id2 nome2 email2 data2 cidade2
+=criarusuario Usuario3 id3 nome3 email3 data3 cidade3
+
+== Alterar Usuario
+=alterarusuario Usuario0 nomeop   "Leila"    OK
+=alterarusuario Usuario1 cidadeop "Amazonas" OK
+=alterarusuario Usuario1 7        "Amazonas" OpcaoNExiste
+=alterarusuario Usuario4 nomeop   "Laura" 	 UsuarioNExiste
+
+== Preencher dados
+=preenchedados Usuario0 nome0 email0 data0 cidade0 OK
+=preenchedados Usuario4 nome0 email0 data0 cidade0 UsuarioNExiste
+
+== Obter Lista Msgs
+=obtermsgs Usuario0 Enviadas OK
+=obtermsgs Usuario0 Recebidas OK
+
+== Obter id do Usuario
+=obterid Usuario1 OK
+=obterid Usuario4 UsuarioNExiste
+
+== Destruir Usuario
+=excluirusuario Usuario1 OK
+=excluirusuario Usuario2 OK
+=excluirusuario Usuario3 OK
+
+== Checar String
+=checastring nome0 OK
+=checastring nome1 OK
+=checastring nome5 InfoInvalida
+
+== Checar Email
+=checaemail email0 OK
+=checaemail email1 InfoInvalida
+=checaemail email2 InfoInvalida
+=checaemail email3 InfoInvalida
+
+== Checar Data de nascimento
+=checadata data0 OK
+=checadata data1 InfoExcedeuTamanho
+=checadata data2 InfoInvalida
+=checadata data3 InfoInvalida
+
